@@ -9,6 +9,9 @@
 	background-color: $accent
 	color: #fff
 
+html
+	scroll-behavior: smooth
+
 body
 	font-size: 16px
 	min-width: 320px
@@ -41,6 +44,8 @@ body
 	max-width: 1024px
 	height: 100%
 	margin: 0 auto
+	padding-left: 15px
+	padding-right: 15px
 
 .section
 	padding: 75px 0
@@ -75,12 +80,66 @@ body
 	font-size: 24px
 
 .header
+	position: relative
 	padding: 30px 0
+	box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.75)
 	&__inner
 		display: flex
 		align-items: center
 		max-width: 1540px
 		margin: 0 auto
+		padding-left: 15px
+		padding-right: 15px
+	&__content
+		display: flex
+		width: 100%
+	&_fixed
+		position: fixed
+		width: 100%
+		background: #fff
+		z-index: 100
+	&__nav-mobile
+		display: none
+		width: 41px
+		height: 41px
+		text-indent: -9999px
+		overflow: hidden
+		position: relative
+		margin: 11px 0 0
+		&::before
+			content: ''
+			top: 12px
+			background: #37e8cb
+			position: absolute
+			left: 10%
+			right: 10%
+			height: 3px
+			margin-top: -2px
+			transition: all .2s linear
+		&::after
+			content: ''
+			top: 28px
+			background: #37e8cb
+			position: absolute
+			left: 10%
+			right: 10%
+			height: 3px
+			margin-top: -2px
+			transition: all .2s linear
+
+.mobile-nav
+	&__line
+		background: #37e8cb
+		position: absolute
+		top: 20px
+		left: 10%
+		right: 10%
+		height: 3px
+		margin-top: -2px
+		transition: all .2s linear
+	&_active
+		transition-duration: 0.3s, 0.3s
+		transition-delay: 0.3s, 0s
 
 .authorization
 	display: flex
@@ -89,10 +148,12 @@ body
 		font-size: 18px
 		text-transform: uppercase
 		margin-right: 35px
+		text-decoration: none
 	&__registration
 		color: #393e6b
 		font-size: 18px
 		text-transform: uppercase
+		text-decoration: none
 
 .nav
 	display: flex
