@@ -45,6 +45,8 @@
         &__items
             flex-wrap: nowrap
             flex-direction: column
+        &__item
+            margin-bottom: 25px
     .install
         &__btn-box
             flex-direction: column
@@ -53,6 +55,9 @@
     .after-installation
         &__btn-opportunities
             margin-bottom: 15px
+            margin-right: 0
+        &__btn-free
+            margin-right: 0
     .btn
         width: 100%
         padding-left: 0
@@ -60,12 +65,54 @@
     .footer
         &__grid
             flex-direction: column
-            // align-items: center
         &__col
             margin: 0
             margin-bottom: 15px
         &__col_right
             margin-left: 0
+    .simple
+        &__steps
+        &__number
+            font-size: 100px
+            height: 130px
+        &__link
+            margin-left: 30px
+            line-height: 20px
+        &__install
+            margin-right: 10px
+    .simple__install, .simple__registration
+        width: 150px
+    .simple__number .icon
+        right: 65px
+        bottom: 20px
+    .simple__install .simple__number>.icon
+        right: 65px
 
 @media (max-width: 479px)
-    .channels
+    .title
+        font-size: 28px
+        line-height: 27px
+    .text
+        font-size: 14px
+        margin-top: 10px
+    .link
+        display: block
+        max-width: 285px
+        font-size: 20px
+        line-height: 20px
+    .list-dashboard
+        &__text
+            margin-top: 10px
+    .step
+        &__img
+            margin-right: 25px
+        &__title
+            font-size: 16px
+        &__text
+            font-size: 14px
+    .item-channels
+        &__img
+            margin-right: 25px
+        &__link
+            font-size: 18px
+            text-decoration: underline
